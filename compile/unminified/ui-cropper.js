@@ -2841,7 +2841,7 @@ angular.module('uiCropper').factory('cropHost', ['$document', '$q', 'cropAreaCir
                     events.trigger('load-done');
 
                     cropEXIF.getData(newImage, function () {
-                        var orientation = cropEXIF.getTag(newImage, 'Orientation');
+                        var orientation = 1;//cropEXIF.getTag(newImage, 'Orientation');
 
                         if ([3, 6, 8].indexOf(orientation) > -1) {
                             var canvas = document.createElement('canvas'),
